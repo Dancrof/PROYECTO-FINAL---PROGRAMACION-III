@@ -391,6 +391,11 @@ footer {
     text-decoration: none;
 }
 
+.fa-github {
+    color: #52006A;
+    background: #fff;
+}
+
 .fa-facebook-f {
     color: #125D98;
     background: #fff;
@@ -417,6 +422,7 @@ footer {
     margin-right: 0.5rem;
     text-align: center;
     line-height: 2rem;
+    border-radius: 5px;
     transition: all 0.3s ease;
 }
 
