@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root{
+    --color-titulos: #68e023;
+    --colo-background-hover: #3E7C17;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    }
+::-webkit-scrollbar-thumb{
+    background: var(--color-general);
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: var(--colo-background-hover);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/*============================ NAVBAR ================================================================*/
+.wrapper-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header {
+    width: 100%;
+    transition: 0.3s ease all;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4.4rem;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 4.4rem;
+}
+
+.logo a {
+    font-family: "Bebas Neue", cursive;
+    font-size: 2.2rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+}
+.fa-bars {
+    display: none;
+}
+.menu li {
+    margin-left: 1rem;
+    list-style: none;
+}
+
+.menu li a {
+    color: #fff;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    padding: 5px 18px;
+}
+
+.menu li a:hover {
+    background: var(--colo-background-hover);
+}
+
+.scrollActive {
+    background: var(--color-titulos);
+}
+/*============================ Avatar================================================================*/
+.avatar{
+    text-align: center;
+    height: 300px;
+    padding: 12px;
+    background-image: url(../img/bg3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0px 0px 20px 20px;
+}
+.avatar img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.avatar h1{
+    font-size: 16px;
+    margin-top: 14px;
+}
+.social{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+.social li {
+    display: inline-block;
+    margin: 5px;
+}
+.social li a{
+    text-decoration: none;
+    color: #1d1d1d;
+    transition: all 0.4s;
+}
+.social li a i{
+    padding: 0 0.5rem;
+}
+.social li a:hover{
+    
+    color: var(--color-titulos);
+}
+
+/*============================ ACERCA DE================================================================*/
+.wrapeer{
+    margin: 0  auto 3rem auto;
+}
+.content_description{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    
+
+}
+.content_description .description{
+    max-width: 1200px;
+    width: 50%;
+    padding-left: 1.5rem;
+}
+.description h3{
+    color: var(--color-titulos);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+.description p{
+    color: #1d1d1d;
+    font-size: 1rem;
+    
+    line-height: 1.4rem;
+}
+.content_description .Historia{
+    width: 40%;
+    padding-right: 1.5rem;
+}
+
+/*============================ RECONOCIMIENTO ================================================================*/
+.content_reconocimientos{
+    max-width: 1200px;
+}
+.content_reconocimientos h2{
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-titulos);
+}
+.content_reconocimientos .content-logros{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.content_reconocimientos .item{
+    display: block;
+    width: 360px;
+    margin: 0 1rem 1rem 1rem;
+}
+.content_reconocimientos .item img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.content_reconocimientos .item p{
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+.content_reconocimientos .item input{
+    width: 100px;
+    padding: 5px;
+    font-size: 1rem;
+    margin-top: 15px;
+    border: none;
+    background: var(--color-titulos);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.content_reconocimientos .item input:hover{
+
+    background: var(--colo-background-hover);
+    color: #fff;
+}
+
+/*============================ FOOTER================================================================*/
+footer 
+{
+  background: #202020;
+  color: #ffffff;
+  width: 100%;
+}
+.footer-all {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+}
+.Contacto {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+.Colum1 {
+  max-width: 400px;
+  
+}
+.Colum1 h1 {
+  font-size: 22px;
+  width: 280px;
+}
+.Colum1 p {
+  font-size: 14px;
+  color: #c7c7c7;
+  margin-top: 20px;
+}
+.Colum2 {
+    
+  max-width: 400px;
+}
+.Colum2 h1 {
+    
+  font-size: 22px;
+  width: 280px;
+}
+.row {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.row i {
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  width: 2rem;
+  height: 2rem;
+  background: #fff;
+  text-align: center;
+  line-height: 2.2rem;
+  transition: all 0.3s ease;
+}
+.row .fa-envelope{
+    background: transparent;
+    font-size: 1.5rem;
+}
+.row i:hover {
+  border-radius: 50%;
+}
+.row a {
+  color: black;
+  text-decoration: none;
+}
+.row label {
+  font-size: 1rem;
+  margin-left: 20px;
+  color: #c7c7c7;
+}
+.Colum3 h1 {
+  font-size: 22px;
+  width: 280px;
+}
+.row2 {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.row2 i {
+  font-size: 1.4rem;
+}
+.row2 label {
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+.Autor {
+  width: 100%;
+  background: #101010;
+}
+.Autor-centrar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0 3rem;
+  padding: 0;
+}
+.Autor-centrar .polityc{
+    display: flex;
+    padding: 1rem;
+    list-style: none;
+}
+.Autor-centrar .polityc li a{
+    
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.Autor-centrar .polityc li a:hover{
+    
+   color: #c7c7c7;
+   text-decoration: underline;
+}
+.copy {
+  color: #c7c7c7;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+@media (max-width: 1196px){
+    .wrapper-nav{
+        width: 90%;
+    }
+    .content_description{
+        justify-content: center;
+        grid-gap: 2rem;
+    }
+    .content_description .description{
+        width: 85%;        
+        padding: 0;
+    }
+    .content_description .Historia {
+        width: 545px;
+        
+    }
+}
+@media (max-width: 817px){
+    
+    .Autor-centrar{
+        justify-content: center;   
+    }
+    .logo {
+        font-size: 2.5rem;
+    }
+    .menu {
+        position: fixed;
+        top: 4.4rem;
+        left: 0;
+        width: 50%;
+        background: #222;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease;
+        transform: translateX(-100%);
+    }
+    .menu li {
+       margin: 1rem 0;
+    }
+    .fa-bars {
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: block;
+    }
+    .menuActive {
+        transform: translateX(0%);
+    }
+}
+@media (max-width: 695px){
+
+    .description h3{
+        
+        padding-left: 0.5rem;
+    }
+    .content_description .Historia {
+        width: 85%;
+        padding: 0;
+    }
+    .content_reconocimientos .item{    
+        width: 60%;
+        min-width: 250px;
+    }
+    .Contacto{
+        flex-direction: column;
+    }
+    .Colum2,.Colum3{
+        margin-top:  2rem;
+    }
+    .Autor-centrar{
+        justify-content: center;
+        margin: 0;
+    }
+}
+@media (max-width: 394px){
+    
+    .Autor-centrar .polityc li a{
+    
+        margin: 0 0.5rem;
+    }
+}

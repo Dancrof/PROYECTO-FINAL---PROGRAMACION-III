@@ -8,7 +8,7 @@ document.addEventListener("scroll", function () {
   if (scrollY >= 10) header.classList.add("scrollActive");
   else header.classList.remove("scrollActive");
 
-  if (scrollY >= 50) BtWst.classList.add("BtWstActive");
+  if (scrollY >= 200) BtWst.classList.add("BtWstActive");
   else BtWst.classList.remove("BtWstActive");
 });
 
