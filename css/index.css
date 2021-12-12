@@ -1,13 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
+/*======================= VARIABLES=====================================*/
 :root {
+    
+    /*== GENERAL ==*/
     font-size: 62.5%;
     scroll-behavior: smooth;
     --primario: #056676;
     --color-general: #9AE66E;
     --color-titulos: #68e023;
+    --color-background: #68e023;
     --colo-background-hover: #3E7C17;
+
+    /*== footer==*/
+    --min-width-280px-title-footer: 280px;
+    --max-width-400px-title-footer: 400px;
+    --color-text1-footer: #c7c7c7;
+    --color-text2-footer: #fff;
+
+    /*== boton scroll==*/
+    --posicion-55px-scroll: 55px;
+    --posicion-15px-scroll: 15px;
 }
+
+/*======================= DISEÑO DEL SCROLL =====================================*/
 ::-webkit-scrollbar{
 width: 10px;
 }
@@ -18,6 +34,8 @@ width: 10px;
 ::-webkit-scrollbar-thumb:hover{
     background: var(--colo-background-hover);
 }
+
+/*======================= GENERAL =====================================*/
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +43,7 @@ width: 10px;
     font-family: 'Roboto', sans-serif;
 }
 
+/*======================= CONTENEDOR DE PORTADA =====================================*/
 .contenedor-portada {
     width: 100%;
     height: 100vh;
@@ -39,7 +58,7 @@ width: 10px;
 }
 
 
-/* HEADER - MENU */
+/*======================= NAVBAR =====================================*/
 
 header {
     width: 100%;
@@ -89,12 +108,16 @@ nav {
     background: var(--colo-background-hover);
 }
 
+.iconMenu {
+    display: none;
+}
+
 .scrollActive {
-    background: var(--color-titulos);
+    background: var(--color-background);
 }
 
 
-/* PORTADA */
+/*======================= PORTADA =====================================*/
 
 .contenedor-portada {
     display: flex;
@@ -111,7 +134,7 @@ nav {
 
 .titulo-portada {
     font-size: 7rem;
-    color: var(--color-general);
+    color: var(--color-background);
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
@@ -142,11 +165,11 @@ nav {
 }
 
 
-/* CONTENIDO PINCIPAL */
+/*======================= SOCIAL, CULTURA, PELITICA, DEPORTE =====================================*/
 
 section {
     width: 100%;
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
 
 .titulo {
@@ -156,19 +179,15 @@ section {
     text-align: center;
 }
 
-#sobreMi {
+.sobre-esme {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 1.5rem 4rem 1.5rem 4rem;
 }
 
-.perfil-img {
+.esme-video {
     width: 40%;
-    padding-right: 140px;
-}
-
-.perfil-img img {
-    width: 100%;
-    border-radius: 15px;
+    max-height: 290px;
 }
 
 .contenido {
@@ -186,7 +205,7 @@ section {
 .contenido p {
     font-size: 1.8rem;
     color: #555;
-    text-align: justify;
+    margin-bottom: 2rem;
 }
 
 .fondo {
@@ -195,8 +214,11 @@ section {
 }
 
 
-/* CONOCIMIENTOS */
+/*======================= PERSONAJES =====================================*/
 
+.personajes-esme .titulo{
+    font-size: 3rem;
+}
 .items {
     justify-content: center;
     display: flex;
@@ -279,9 +301,11 @@ section {
     width: 100px;
     padding: 5px;
     margin-top: 20px;
+    font-size: 1.5rem;
     border: none;
-    background: var(--color-general);
+    background: var(--color-background);
     border-radius: 5px;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 .card .description input:hover{
@@ -289,67 +313,17 @@ section {
     background: var(--colo-background-hover);
     color: #fff; 
 }
-/* proyectos */
 
-.item {
-    background: #01597c;
-    width: 35rem;
-    height: 21rem;
-    overflow: hidden;
-    border-radius: 15px;
-    margin: 2rem;
-    position: relative;
-}
-
-.item img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.fondo-caja {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #a3d2ca5e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(-100%);
-    transition: all 0.3s ease;
-}
-
-.fondo-caja a {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #222;
-    font-weight: bold;
-    text-shadow: 0 0 5px #fff;
-    text-decoration: none;
-}
-
-.item:hover>.fondo-caja {
-    transform: translateX(0%);
-}
-
-
-/* otros */
-
-.iconMenu {
-    display: none;
-}
-
-.BtWst {
+/*======================= BOTON SCROLL =====================================*/
+.fa-arrow-up {
     opacity: 0;
     position: fixed;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    bottom: 15px;
-    right: 15px;
-    background: #0df053;
+    width: var(--posicion-55px-scroll);
+    height: var(--posicion-55px-scroll);
+    line-height: var(--posicion-55px-scroll);
+    bottom: var(--posicion-15px-scroll);
+    right: var(--posicion-15px-scroll);
+    background: var(--color-background);
     color: #fff;
     border-radius: 50%;
     text-align: center;
@@ -357,67 +331,24 @@ section {
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
     transition: 0.3s ease all;
     z-index: 100;
+    cursor: pointer;
 }
 
-.BtWstActive {
+.BtUptActive {
     opacity: 1;
 }
 
-.BtWst:hover {
+.fa-arrow-up:hover {
     text-decoration: none;
-    color: #0df053;
+    color: var(--color-background);
     background: #fff;
-}
-
-form {
-    width: 450px;
-    margin: auto;
-    background: rgb(0, 0, 0, 0.4);
-    padding: 10px 20px;
-    box-sizing: border-box;
-    margin-top: 26px;
-    border-radius: 7px;
-}
-
-form h2 {
-    text-align: center;
-    margin: 0;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #056676;
-}
-
-input,
-textarea {
-    width: 100%;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    box-sizing: border-box;
-    font-size: 1.5rem;
-}
-
-textarea {
-    min-height: 100px;
-    max-height: 200px;
-    max-width: 100%;
-}
-
-#Bt {
-    background: #31384a;
-    color: #fff;
-    padding: 1.2rem;
-    font-size: 2rem;
-}
-
-#Bt:hover {
-    cursor: pointer;
 }
 
 /*=========================FOOTER=========================================*/
 footer 
 {
   background: #202020;
-  color: #ffffff;
+  color: var(--color-text2-footer);
   width: 100%;
 }
 .footer-all {
@@ -433,7 +364,7 @@ footer
   font-size: 0.9rem;
 }
 .Colum1 {
-  max-width: 400px;
+  max-width: var(--max-width-400px-title-footer);
   
 }
 .Colum1 h1 {
@@ -441,12 +372,12 @@ footer
 }
 .Colum1 p {
   font-size: 14px;
-  color: #c7c7c7;
+  color: var(--color-text1-footer);
   margin-top: 20px;
 }
 .Colum2 {
     
-  max-width: 400px;
+  max-width: var(--max-width-400px-title-footer);
 }
 .Colum2 h1 {
     
@@ -463,7 +394,7 @@ footer
   font-size: 1.1rem;
   width: 2rem;
   height: 2rem;
-  background: #fff;
+  background: var(--color-text2-footer);
   text-align: center;
   line-height: 2.2rem;
   transition: all 0.3s ease;
@@ -482,10 +413,7 @@ footer
 .row label {
   font-size: 1.5rem;
   margin-left: 20px;
-  color: #c7c7c7;
-}
-.Colum3 {
-    
+  color: var(--color-text1-footer);
 }
 .Colum3 h1 {
   font-size: 22px;
@@ -524,20 +452,21 @@ footer
 .Autor-centrar .polityc li a{
     
     margin: 0 1rem;
-    color: #fff;
+    color: var(--color-text1-footer);
     text-decoration: none;
     transition: all 0.3s;
 }
 .Autor-centrar .polityc li a:hover{
     
-   color: #c7c7c7;
+   color: var(--color-text1-footer);
    text-decoration: underline;
 }
 .copy {
-  color: #c7c7c7;
+  color: var(--color-text1-footer);
   padding: 1rem;
 }
 
+/*======================= RESPONSIVE MEDIAQUERYS =====================================*/
 @media (max-width: 1400px) {
     .wrapper {
         max-width: 90%;
@@ -579,19 +508,19 @@ footer
     .titulo-portada {
         font-size: 3rem;
     }
-    #sobreMi {
+    .sobre-esme {
         flex-direction: column;
+    }
+    .order-sobreEsme{
+        flex-direction: column-reverse;
     }
     .contenido {
         width: 100%;
     }
-    .perfil-img {
+    .esme-video {
         width: 100%;
         padding: 0;
         margin-bottom: 3rem;
-    }
-    .perfil-img img {
-        width: 100%;
     }
     .iconMenu {
         color: #fff;
@@ -621,6 +550,13 @@ footer
     
 }
 @media (max-width: 588px) {
+    
+    .sobre-esme {
+        padding: 2rem 0 0 0;
+    }
+    .contenido p{
+        font-size: 1.6rem;
+    }
     .Autor-centrar{
         justify-content: center;
     }

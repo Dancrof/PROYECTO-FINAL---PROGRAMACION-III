@@ -1,27 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
+/*============================ VARIABLES ================================================================*/
 :root{
+    /*== general ==*/
     --color-titulos: #68e023;
     --colo-background-hover: #3E7C17;
+    --color-background: #68e023;
+    
+    /*== footer==*/
+    --min-width-280px-title-footer: 280px;
+    --max-width-400px-title-footer: 400px;
+    --color-text1-footer: #c7c7c7;
+    --color-text2-footer: #fff;
+
+    /*== reconocimiento ==*/
+    --size-margin-reconocimiento: 1rem;
+
+    /*== boton scroll==*/
+    --posicion-55px-scroll: 55px;
+    --posicion-15px-scroll: 15px;
+
+    /*== Aserca de ==*/
+    --size-2rem-about: 2rem;
+
 }
+
+/*============================ DISEÑO SCROLL ================================================================*/
 ::-webkit-scrollbar{
     width: 10px;
     }
 ::-webkit-scrollbar-thumb{
-    background: var(--color-general);
+    background: var(--color-background);
     border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb:hover{
     background: var(--colo-background-hover);
 }
+
+/*============================ GLOBAL================================================================*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
 /*============================ NAVBAR ================================================================*/
-.wrapper-nav {
+.wrapper {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -33,6 +58,9 @@ header {
     left: 0;
     height: 4.4rem;
     z-index: 2;
+}
+.iconMenu {
+    display: none;
 }
 
 nav {
@@ -46,7 +74,7 @@ nav {
 .logo a {
     font-family: "Bebas Neue", cursive;
     font-size: 2.2rem;
-    color: white;
+    color: #fff;
     text-decoration: none;
     cursor: pointer;
 }
@@ -76,9 +104,13 @@ nav {
 }
 
 .scrollActive {
-    background: var(--color-titulos);
+    background: var(--color-background);
 }
+
 /*============================ Avatar================================================================*/
+.wrapper-portada{
+    margin-bottom: 3rem;
+}
 .avatar{
     text-align: center;
     height: 300px;
@@ -121,66 +153,76 @@ nav {
 }
 
 /*============================ ACERCA DE================================================================*/
-.wrapeer{
-    margin: 0  auto 3rem auto;
-}
-.content_description{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1300px;
-    
 
+.about-me{
+    width: 100%;
+    padding: 3rem 0;
 }
-.content_description .description{
-    max-width: 1200px;
-    width: 50%;
-    padding-left: 1.5rem;
-}
-.description h3{
+.titulo {
+    font-size: 2.5rem;
     color: var(--color-titulos);
-    font-size: 1.5rem;
-    font-weight: 600;
     margin-bottom: 1rem;
-    padding-left: 2rem;
+    text-align: center;
 }
-.description p{
-    color: #1d1d1d;
-    font-size: 1rem;
-    
-    line-height: 1.4rem;
+
+.about-me {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 var(--size-2rem-about) var(--size-2rem-about) var(--size-2rem-about);
 }
-.content_description .Historia{
+
+.about-video {
     width: 40%;
-    padding-right: 1.5rem;
+    justify-self: center;
+    max-height: 290px;
+}
+
+.contenido {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido .titulo {
+    text-align: left;
+    font-size: var(--size-2rem-about);
+}
+
+.contenido p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: var(--size-2rem-about);
 }
 
 /*============================ RECONOCIMIENTO ================================================================*/
 .content_reconocimientos{
-    max-width: 1200px;
+    padding: 1rem 0 2rem 0;
 }
 .content_reconocimientos h2{
     text-align: center;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: var(--size-margin-reconocimiento);
     color: var(--color-titulos);
 }
 .content_reconocimientos .content-logros{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    padding: 0;
 }
 .content_reconocimientos .item{
     display: block;
     width: 360px;
-    margin: 0 1rem 1rem 1rem;
+    margin: 0 var(--size-margin-reconocimiento) 3rem var(--size-margin-reconocimiento);
 }
 .content_reconocimientos .item img{
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: var(--size-margin-reconocimiento);
 }
 .content_reconocimientos .item p{
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--size-margin-reconocimiento);
 }
 .content_reconocimientos .item input{
     width: 100px;
@@ -188,7 +230,7 @@ nav {
     font-size: 1rem;
     margin-top: 15px;
     border: none;
-    background: var(--color-titulos);
+    background: var(--color-background);
     border-radius: 5px;
     transition: all 0.3s ease;
 }
@@ -197,12 +239,42 @@ nav {
     background: var(--colo-background-hover);
     color: #fff;
 }
+/*================================== BOTON DE SCROLL===============================*/
+
+.fa-arrow-up {
+    opacity: 0;
+    position: fixed;
+    width: var(--posicion-55px-scroll);
+    height: var(--posicion-55px-scroll);
+    line-height: var(--posicion-55px-scroll);
+    bottom: var(--posicion-15px-scroll);
+    right: var(--posicion-15px-scroll);
+    background: var(--color-background);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease all;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.BtUptActive {
+    opacity: 1;
+}
+
+.fa-arrow-up:hover {
+    text-decoration: none;
+    color: var(--color-titulos);
+    background: #fff;
+}
 
 /*============================ FOOTER================================================================*/
 footer 
 {
   background: #202020;
-  color: #ffffff;
+  color: var(--color-text2-footer);
   width: 100%;
 }
 .footer-all {
@@ -223,21 +295,21 @@ footer
 }
 .Colum1 h1 {
   font-size: 22px;
-  width: 280px;
+  min-width: var(--min-width-280px-title-footer);
 }
 .Colum1 p {
   font-size: 14px;
-  color: #c7c7c7;
+  color: var(--color-text1-footer);
   margin-top: 20px;
 }
 .Colum2 {
     
-  max-width: 400px;
+  max-width: var(--max-width-400px-title-footer);
 }
 .Colum2 h1 {
     
   font-size: 22px;
-  width: 280px;
+  min-width: 280px;
 }
 .row {
   margin-top: 20px;
@@ -250,7 +322,7 @@ footer
   font-size: 1.1rem;
   width: 2rem;
   height: 2rem;
-  background: #fff;
+  background: var(--color-text2-footer);
   text-align: center;
   line-height: 2.2rem;
   transition: all 0.3s ease;
@@ -269,11 +341,11 @@ footer
 .row label {
   font-size: 1rem;
   margin-left: 20px;
-  color: #c7c7c7;
+  color: var(--color-text1-footer);
 }
 .Colum3 h1 {
   font-size: 22px;
-  width: 280px;
+  min-width: var(--min-width-280px-title-footer);
 }
 .row2 {
   margin-top: 20px;
@@ -309,40 +381,33 @@ footer
 .Autor-centrar .polityc li a{
     
     margin: 0 1rem;
-    color: #fff;
+    color: var(--color-text2-footer);
     font-size: 0.8rem;
     text-decoration: none;
     transition: all 0.3s;
 }
 .Autor-centrar .polityc li a:hover{
     
-   color: #c7c7c7;
+   color: var(--color-text1-footer);
    text-decoration: underline;
 }
 .copy {
-  color: #c7c7c7;
+  color: var(--color-text1-footer);
   padding: 1rem;
   font-size: 0.8rem;
 }
 @media (max-width: 1196px){
-    .wrapper-nav{
-        width: 90%;
-    }
-    .content_description{
-        justify-content: center;
-        grid-gap: 2rem;
-    }
-    .content_description .description{
-        width: 85%;        
-        padding: 0;
-    }
-    .content_description .Historia {
-        width: 545px;
-        
+    .wrapper {
+        max-width: 90%;
     }
 }
+
+/*============================ RESPONSIVE MEDIAQUERYS ================================================================*/
 @media (max-width: 817px){
     
+    .about-me{
+        padding: 0 0 1rem 0;
+    }
     .Autor-centrar{
         justify-content: center;   
     }
@@ -363,29 +428,31 @@ footer
     .menu li {
        margin: 1rem 0;
     }
-    .fa-bars {
+    .iconMenu {
         color: #fff;
         font-size: 1.5rem;
         cursor: pointer;
         display: block;
     }
+    .about-me{
+        flex-direction: column;
+    }
     .menuActive {
         transform: translateX(0%);
+    }
+    .contenido {
+        width: 100%;
+    }
+    .about-video {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 3rem;
     }
 }
 @media (max-width: 695px){
 
-    .description h3{
-        
-        padding-left: 0.5rem;
-    }
-    .content_description .Historia {
-        width: 85%;
-        padding: 0;
-    }
     .content_reconocimientos .item{    
-        width: 60%;
-        min-width: 250px;
+        width: 90%;
     }
     .Contacto{
         flex-direction: column;
@@ -400,6 +467,9 @@ footer
 }
 @media (max-width: 394px){
     
+    .contenido p{
+        font-size: 1rem;
+    }
     .Autor-centrar .polityc li a{
     
         margin: 0 0.5rem;

@@ -17,11 +17,12 @@
     <!--Estilos-->
     <link rel="stylesheet" href="../css/personajes.css">
 
-    <title>Document</title>
+    <title>Famoso</title>
 </head>
 <body>
+    <!----------------------------- NAVBAR ------------------------------>
     <header>
-        <nav class="wrapper-nav">
+        <nav class="wrapper">
             <div class="logo"><a href="../index.html">TIERRA VERDE</a></div>
             <ul class="menu">
                 <li><a href="#Inicio" class="opmenu">Inicio</a></li>
@@ -29,10 +30,12 @@
                 <li><a href="#proyectos" class="opmenu">Proyectos</a></li>
                 <li><a href="#contactame" class="opmenu">Contacto</a></li>
             </ul>
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-bars iconMenu"></i>
         </nav>
     </header>
-    <section class="wrapeer">
+
+    <!----------------------------- AVATAR ------------------------------>
+    <section class="wrapper-portada">
         <div class="avatar">
             <img src="../img/Angular.png" alt="">
             <h1>Angular</h1>
@@ -43,33 +46,29 @@
             <li><a href="#"><i class="fab fa-twitter"></i>twiter</a></li>
         </ul>
     </section>
-    <section class="content_description wrapeer">
-       <div class="description">
-            <h3>Acerca de</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Id voluptas blanditiis nobis ipsum accusantium numquam 
-                doloremque perspiciatis dolores voluptates alias praesentium 
-                earum dolore ipsa nostrum corporis harum illum suscipit, 
-                molestiae quaerat est? Sint dolores esse iusto laborum dicta, 
-                voluptate aliquid quae ullam nesciunt, veritatis minima 
-                dolorum? Temporibus debitis quasi natus maxime deleniti 
-                minima nulla rerum, maiores velit tempora earum expedita 
-                sunt quia cupiditate aliquid ratione omnis similique 
-            
+
+    <!----------------------------- Acerca De ------------------------------>
+    <section id="asercaDe" class="about-me wrapper">
+        <div class="contenido">
+            <h2 class="titulo">Mundo Social</h2>
+            <p class="texto">
+                Hola, soy Software Developer con ganas de seguir aprendiendo nuevas tecnologias y expandir mis horizontes. Como programador junior tengo un dominio basico de la sintaxis y la logica de programacion.
             </p>
-       </div>
-       <div class="Historia">
+        </div>
+
+        <div class="about-video">
             <iframe width="100%" 
-                height="315" 
-                src="https://www.youtube.com/embed/5vKUQJ2Tqz8" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
+                    height="290" 
+                    src="https://www.youtube.com/embed/Q9cQIGoWrto" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
             </iframe>
-       </div>
+        </div>
     </section>
-    <section class="content_reconocimientos wrapeer">
+
+    <!----------------------------- Reconocimientos ------------------------------>
+    <section class="content_reconocimientos wrapper">
         <h2>Reconocimientos</h2>
         <div class="content-logros">
             <div class="item">
@@ -103,7 +102,7 @@
             </div>
         </div>
     </section>
-    <!--FOOTER-->
+    <!----------------------------- FOOTER ------------------------------>
     <footer id="Contacto">
         <div class="footer-all navegation">
           <div class="Contacto">
@@ -160,7 +159,11 @@
           </div>
         </div>
     </footer>
-    <!--LLamando al MAin.js-->
+    
+    <!----------------------------- BOTON DE SCROLL ------------------------------>
+    <i class="fas fa-arrow-up"></i>
+
+    <!----------------------------- LLAMANDO AL MAIN.JS ------------------------------>
     <script src="../main.js"></script>
 </body>
 </html>
