@@ -313,6 +313,15 @@ section {
    
     margin: 10px;
     font-size: 1.3rem;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
 }
 .card .description input{
     width: 100px;
