@@ -251,6 +251,14 @@ nav {
     font-size: 0.9rem;
     margin-bottom: var(--size-margin-reconocimiento);
     max-height: 107px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     overflow: hidden;
 }
 .content_reconocimientos .item input{
